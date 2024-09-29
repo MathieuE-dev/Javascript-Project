@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(#d79922, #efe2ba);
+}
+.container {
+  font-size: 16px;
+  width: 90vw;
+  max-width: 37.5em;
+  padding: 3em 1.8em;
+  background-color: #F13C20;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.6em;
+}
+.search-content {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1.2em;
+}
+.search-content input,
+.search-content button {
+  font-size: 0.9em;
+  outline: none;
+  border-radius: 0.5em;
+}
+.search-content input {
+  background-color: transparent;
+  border: 1px solid #4056A1;
+  padding: 0.7em;
+  color: #ffffff;
+}
+.search-content input:focus {
+  border-color: #4056A1;
+}
+.search-content button {
+  background-color: #d79922;
+  border: none;
+  cursor: pointer;
+}
+
+.search-content button:hover {
+  transform: scale(1.2);
+}
+
+#result {
+  color: white;
+}
+.info {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  align-items: center;
+  margin-top: 1.2em;
+}
+.poster {
+  width: 100%;
+}
+h2 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  margin: 0.6em 0 0.9em 0;
+}
+.rating img {
+  width: 1.2em;
+}
+.rating h4 {
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.details {
+  display: flex;
+  font-size: 0.95em;
+  gap: 1em;
+  justify-content: center;
+  color: white;
+  margin: 0.6em 0;
+  font-weight: 300;
+}
+.genre {
+  display: flex;
+  justify-content: space-around;
+}
+.genre div {
+  border: 1px solid #4056A1;
+  font-size: 0.75em;
+  padding: 0.4em 1.6em;
+  border-radius: 0.4em;
+  font-weight: 300;
+}
+.genre div:hover{
+  transform: scale(1.1);
+}
+h3 {
+  font-weight: 500;
+  margin-top: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p {
+  font-size: 0.9em;
+  font-weight: 300;
+  line-height: 1.8em;
+  text-align: justify;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.msg {
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    font-size: 14px;
+  }
+  .info {
+    grid-template-columns: 1fr;
+  }
+  .poster {
+    margin: auto;
+    width: auto;
+    max-height: 10.8em;
+  }
+}
