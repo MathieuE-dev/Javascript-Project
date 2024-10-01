@@ -1,22 +1,21 @@
-//Initial References
 let movieNameRef = document.getElementById("movie-name");
 let searchBtn = document.getElementById("search-btn");
 let result = document.getElementById("result");
 
-//Function to fetch data from API
+//Function to find data from API//
 let getMovie = () => {
   let movieName = movieNameRef.value;
   let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
-  //If input field is empty
+  //Field is empty ????//
   if (movieName.length <= 0) {
-    result.innerHTML = `<h3 class="msg">Please Enter A Movie Name</h3>`;
+    result.innerHTML = `<h3 class="message">Please Enter A Movie Name</h3>`;
   }
-  //If input field is NOT empty
+  //Field isn't empty ????//
   else {
     fetch(url)
       .then((resp) => resp.json())
       .then((data) => {
-        //If movie exists in database
+        //The movie exists in the database//
         if (data.Response == "True") {
           result.innerHTML = `
             <div class="info">
@@ -44,14 +43,14 @@ let getMovie = () => {
             
         `;
         }
-        //If movie does NOT exists in database
+        //No film in database//
         else {
-          result.innerHTML = `<h3 class='msg'>${data.Error}</h3>`;
+          result.innerHTML = `<h3 class='message'>${data.Error}</h3>`;
         }
       })
-      //If error occurs
+      //error message//
       .catch(() => {
-        result.innerHTML = `<h3 class="msg">Error Occured</h3>`;
+        result.innerHTML = `<h3 class="message">Error</h3>`;
       });
   }
 };
